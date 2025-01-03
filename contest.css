@@ -1,0 +1,187 @@
+body {
+    font-family: "Poppins", sans-serif;
+    /* background-color: rgb(188 255 255 / 45%); */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.freepik.com/free-vector/watercolor-blue-background_23-2149320191.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contest-container {
+    margin: 30px auto;
+    padding: 30px;
+    width: 75vw;
+    height: 80%;
+    /* max-width: 1000px; */
+    background-image: url('https://img.freepik.com/free-vector/futuristic-poly-background_23-2148453991.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.choices {
+    margin-bottom: 10px;
+}
+
+.time {
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 1.45em;
+}
+
+#time {
+    margin: 10px 14px;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    background-color: #dfeffe;
+}
+
+.difficulty {
+    margin: 10px 4px;
+    padding: 10px;
+    font-size: 1.45em;
+}
+
+#difficulty {
+    margin: 10px 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    background-color: #dfeffe;
+}
+
+.options {
+    margin: 10px 5px;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+.textdisplay {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #dfeffe;
+    border: 2px solid rgb(34, 34, 34);
+    border-radius: 25px;
+}
+
+h2 {
+    color: rgb(35, 35, 35);
+    margin-top: -3px;
+}
+
+#textgenerated {
+    color: rgb(55, 55, 55);
+    font-size: 24px;
+    text-align: left;
+}
+
+textarea {
+    width: 98%;
+    margin: 15px 0px;
+    padding: 15px;
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.timer {
+    font-size: 1.3em;
+    color: black;
+    margin: 10px 0px;
+    
+    
+}
+
+button {
+    background-color: rgb(255 68 68);
+    color: rgb(32, 4, 4);
+    border: none;
+    padding: 15px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: white;
+    padding: 15px 25px;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+}
+
+.results-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    overflow-y: auto; /* Enables vertical scrolling */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+.results-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.results-content h2 {
+    margin-bottom: 20px;
+    color: rgb(0 173 255);
+    font-size: 32px;
+}
+
+.results-content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#missedwordslist {
+    list-style-type: none;
+    padding: 0;
+}
+
+#missedwordslist li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+}
+
+.closeresults {
+    background-color: rgb(255 68 68);
+    color: rgb(32, 4, 4);
+    border: none;
+    padding: 15px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.closeresults:hover {
+    background-color: white;
+    padding: 15px 25px;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+}

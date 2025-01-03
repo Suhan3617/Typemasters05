@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+    <script type="module" src="lead.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-img" src="https://images.deepai.org/art-image/9d986968ae8f487c84fa39762bcf5559/create-a-logo-for-a-typing-contest-website-na_BJv7UmD.jpg" alt="">
+            Leaderboard
+        </div>
+    </header>
+    <main>
+        <div class="filters">
+            <label for="city-filter">Filter by City :</label>
+            <select id="city-filter" onchange="filterByCity()">
+                <option value="all">All Cities</option>
+                <!-- cities will be added to options as a user puts that city in his/her profile  -->
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr id="firstrow">
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>City</th>
+                    <th>Difficulty</th>
+                    <th>Typing Speed (in WPM)</th>
+                    <th>Accuracy (in %)</th>
+                    <th>Score</th>
+                    <!-- <th>Badges</th> -->
+                </tr>
+            <tbody id="leaderboard-data">
+                <!-- will de added dynamically  -->
+            </tbody>
+            </thead>
+        </table>
+    </main>
+    <!-- <script src="leaderboard.js"></script> -->
+</body>
+
+</html>

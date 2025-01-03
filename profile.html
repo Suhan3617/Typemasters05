@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <script type="module" src="profile.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+
+</head>
+
+<body>
+    <div class="profile-container">
+        <h1>Your Profile</h1>
+        <div id="profile-section">
+            <img id="profile-pic"
+                src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg"
+                alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;" />
+                <br>
+            <button id="Upload-Image">Upload Image</button>
+        </div>
+        <img id="profile-image" alt="Profile Picture" style="display:none;" />
+        <h2 id="username">Username : Loading...</h2>
+        <h2 id="city">City : Loading...</h2>
+        <h2 id="email">Email : Loading...</h2>
+
+        <h3>Typing Stats</h3>
+        <ul>
+            <li id="bestwpm">Best WPM : Loading</li>
+            <li id="bestaccuracy">Best Accuracy : Loading</li>
+            <li id="contest-played">No. of Contests played : Loading</li>
+        </ul>
+        <button id="editprofilebtn">Edit Profile</button>
+        <h3>Contest History</h3>
+        <table id="contesthistorytable">
+            <thead>
+                <tr class="firstrow">   
+                    <th>Date</th>
+                    <th>Difficulty</th>
+                    <th>Duration(in secs)</th>
+                    <th>WPM</th>
+                    <th>Accuracy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- will be added through firestore -->
+            </tbody>
+        </table>
+        <h3>Search Friends</h3>
+        <input type="text" id="search" placeholder="Enter Username to Search">
+        <br>
+        <button id="searchbtn">Search</button>
+        <div id="search-result" class="hidden">
+            <h3>Search Results</h3>
+            <p id="result-username">Username : Loading...</p>
+            <p id="result-city">City : Loading...</p>
+            <!-- <button id="add-friend-btn">Add to Friend List</button>
+            <button id="view-profile-btn">View Profile</button> -->
+        </div>
+
+        <h3>Friend List</h3>
+        <ul id="friendslist">
+            <!-- will be added when user adds a friend  -->
+        </ul>
+        <button id="logout-btn" class="logout-button">Logout</button>
+    </div>
+
+    <div id="editprofile" class="edit">
+        <div class="editcontainer">
+            <h1>Edit Profile</h1>
+            <form action="" id="edit-profile">
+                <label for="new-username">Username : </label>
+                <input type="text" id="new-username" placeholder="Enter your New Username"><br>
+                <label for="city">City : </label>
+                <input type="text" id="new-city" placeholder="Enter your New City"><br>
+                <button type="submit">Save Changes</button>
+            </form>
+            <button id="close-edit-container">Close</button>
+        </div>
+    </div>
+    <!-- Friend Profile Modal -->
+    <div id="friend-profile-modal" class="modal" >
+        <div class="modal-content">
+            <h2 id="fnrdprofile">Friend's Profile</h2>
+            <img id="friend-profile-pic" src="default_profile_picture_url.jpg" alt="Friend's Profile Picture" />
+            <h3 id="friend-username">Username: Loading...</h3>
+            <h3 id="friend-city">City: Loading...</h3>
+            <h3 id="friend-email">Email: Loading...</h3>
+
+            <h3 id="frndhis">Friend's Contest History</h3>
+            <table id="friend-contest-history">
+                <thead>
+                    <tr class="firstrow">
+                        <th>Date</th>
+                        <th>Duration</th>
+                        <th>Difficulty</th>
+                        <th>WPM</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Contest history will be populated here -->
+                </tbody>
+            </table>
+
+            <button id="add-friend-btn">Add Friend</button><br>
+            <button id="close-friend-profile-btn">Close</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

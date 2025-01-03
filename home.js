@@ -1,0 +1,1 @@
+console.log("Welcome to Type Rivals! Step into the ultimate typing contest where you can test your skills, compete against others, and push your typing speed to new heights. Whether you're aiming for personal improvement or looking to claim the top spot, every keystroke brings you closer to victory. Let the typing showdown begin!")

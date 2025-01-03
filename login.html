@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="module" src="login.js"></script>
+</head>
+<body>
+    <form class="container">
+        <div class="left-side">
+            <div class="logo">
+                <img class="logo-img" src="https://images.deepai.org/art-image/9d986968ae8f487c84fa39762bcf5559/create-a-logo-for-a-typing-contest-website-na_BJv7UmD.jpg" alt="TYPEMASTERS Logo">
+                TYPEMASTERS
+            </div>
+            <h2>Login</h2>
+            <div id="signInMessage" class="messageDiv" style="display: none;"></div>
+            <div class="social-login">
+                <button id="google-btn" tabindex="0" class="social">
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png" width="16px" height="16px" aria-hidden="true">
+                    "Log in with Google"
+                </button>
+            </div>
+            <div class="divider">
+                <div class="filler">
+                    <span class="divider-line">&nbsp;</span>
+                </div>
+                <span class="content">OR</span>
+                <div class="filler">
+                    <span class="divider-line">&nbsp;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">
+                    <img src="https://img.icons8.com/ios/50/000000/email.png" width="20px" height="20px" alt="email icon"> Email:
+                </label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    <img src="https://img.icons8.com/ios/50/000000/lock.png" width="20px" height="20px" alt="password icon"> Password:
+                </label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button id="login-btn" type="submit">Login</button>
+            <p class="signup-prompt">
+                If you don't have an account, <a href="signup.html">Sign Up</a> first.
+            </p>
+        </div>
+        <div class="right-side">
+            <img class="guy-img" src="https://cdn-cm.freepik.com/previews/729bd527-3b75-4fab-becd-bb7efb7c7bd9.jpg?token=exp=1735916843~hmac=f88869e865f206180b06c65aad80d601efa20217e690d7eec6306eef29ac29f9" alt="Login image">
+        </div>
+        
+    </form>
+
+</body>
+</html>
+

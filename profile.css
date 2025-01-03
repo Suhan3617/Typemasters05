@@ -1,0 +1,337 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('https://img.freepik.com/free-vector/watercolor-blue-background_23-2149320191.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-container {
+    background-image: url('https://img.freepik.com/free-vector/futuristic-poly-background_23-2148453991.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 60px auto;
+    padding: 25px;
+    width: 40vw;
+    height: 70%;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+    border-radius: 25px;
+}
+
+#profile-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 3em;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#username {
+    color: black;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 30px;
+}
+
+#city {
+    color: black;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 30px;
+}
+
+#email {
+    color: black;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 30px;
+}
+
+h2 {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+h3 {
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    font-size: 1.9em;
+}
+
+/* p{
+    color: #1d1d1d;
+    margin: 5px 0;
+    font-size: 18px;
+    } */
+li {
+    list-style: none;
+    color: black;
+    margin: 12px -37px;
+    text-align: left;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(255 68 68);
+    color: rgb(32, 4, 4);
+    border: none;
+    padding: 15px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: white;
+    padding: 15px 25px;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+}
+
+.edit {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(188 255 255 / 45%);
+}
+
+
+
+.editcontainer {
+    background-image: url('https://img.freepik.com/free-vector/futuristic-poly-background_23-2148453991.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 25px auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.editcontainer h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.editcontainer label {
+    font-size: 25px;
+    border-radius: 1px;
+}
+
+#close-edit-container {
+    padding: 5px;
+}
+
+#edit-profile input {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 6px 5px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+#edit-profile button {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+#search {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#friendslist {
+    list-style: none;
+    padding: 5px;
+}
+
+#friendslist li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+#contesthistorytable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(188 255 255 / 45%);
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+#contesthistorytable th,
+#contesthistorytable td {
+    padding: 15px 15px;
+    border: 2px solid black;
+}
+
+#contesthistorytable th {
+    font-weight: 700;
+    color: black;
+}
+.firstrow{
+    background-color: rgb(0 173 300);
+    color: white;
+}
+#contesthistorytable tr:nth-child(even) {
+    background-color: rgba(216, 255, 255, 0.45);
+}
+
+#contesthistorytable th:first-child,
+#contesthistorytable td:first-child {
+    border-top-left-radius: 10px;
+}
+
+#contesthistorytable th:last-child,
+#contesthistorytable td:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Friend Profile Modal */
+#friend-profile-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(188 255 255 / 45%);
+    z-index: 1000; /* Ensure it's on top */
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#friend-profile-modal .modal-content {
+    background-image: url('https://img.freepik.com/free-vector/futuristic-poly-background_23-2148453991.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 80%;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+    text-align: center;
+    overflow-y: auto;
+    max-height: 90vh; /* Ensure the modal is contained within the viewport */
+}
+
+#friend-profile-pic {
+    height: 150px;
+    width: 150px;
+    border-radius: 10%; /* Ensures the image is circular */
+    margin-bottom: 20px;
+}
+#fnrdprofile{
+    color: white;
+    font-size: 3em;
+}
+.modal-content h2 {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Keep content aligned and spaced */
+.modal-content h3 {
+    margin-bottom: 15px;
+    color: black;
+    margin-top: 25px;
+    font-size: 1.35em;
+    text-align: left;
+}
+#frndhis{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 40px;
+}
+#friend-contest-history{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(188 255 255 / 45%);
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+#friend-contest-history th,
+#friend-contest-history td {
+    padding: 15px 15px;
+    border: 2px solid black;
+}
+
+#friend-contest-history th {
+    font-weight: 700;
+    color: black;
+}
+
+#friend-contest-history tr:nth-child(even) {
+    background-color: rgba(216, 255, 255, 0.45);
+}
+
+#friend-contest-history th:first-child,
+#friend-contest-history td:first-child {
+    border-top-left-radius: 10px;
+}
+
+#friend-contest-history th:last-child,
+#friend-contest-history td:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

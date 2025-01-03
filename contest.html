@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest</title>
+    <link rel="stylesheet" href="contest.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="contest-container">
+        <h1>Typing Contest</h1>
+        <div class="choices">
+            <label for="timeduration" class="time">Select Duration:-</label>
+            <select name="time" id="time">
+                <option class="options" value="30">30 secs</option>
+                <option class="options" value="60">1 min</option>
+                <option class="options" value="120">2 mins</option>
+            </select><br>
+            <label for="difficulty" class="difficulty">Select Difficulty Level:-</label>
+            <select name="difficulty" id="difficulty">
+                <option class="options" value="easy">Easy</option>
+                <option class="options" value="moderate">Moderate</option>
+                <option class="options" value="hard">Hard</option>
+            </select>
+        </div>
+        <div class="textdisplay">
+            <h2>Generated Text</h2>
+            <p id="textgenerated">Click 'Start Contest' and watch content come alive!</p>
+        </div>
+        <textarea name="typing-area" id="typing-area" placeholder="Start Typing here" rows="10"></textarea>
+        <div class="timer">Time Left : <span id="time">0</span></div>
+        <button id="startcontest">Start Contest</button>
+    </div>
+
+    <!-- Results Pop-Up -->
+    <div id="resultscontainer" class="results-popup">
+        <div class="results-content">
+            <h2>Contest Results</h2>
+            <p><strong>WPM:</strong> <span id="wpm"></span></p>
+            <p><strong>Accuracy:</strong> <span id="accuracy"></span>%</p>
+            <p><strong>Difficulty:</strong> <span id="difficulty-display"></span></p>
+            <p><strong>Duration:</strong> <span id="duration-display"></span> seconds</p>
+            <p><strong>Score:</strong><span id="score"></span></p>
+            <p><strong>Missed Words:</strong></p>
+            <ul id="missedwordslist"></ul>
+            <p><strong>Incorrect Words:</strong></p>
+            <ul id="incorrectwordslist"></ul> <!-- Added Incorrect Words List -->
+        </div>
+        <div>
+            <h3>Typing Results Breakdown</h3>
+            <canvas id="resultsChart" width="50" height="50"></canvas>
+            <button class="closeresults">Close</button>
+        </div>
+    </div>
+
+    <script type="module" src="contest.js"></script>
+</body>
+
+</html>

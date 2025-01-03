@@ -1,0 +1,50 @@
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-image: url('https://img.freepik.com/free-vector/watercolor-blue-background_23-2149320191.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.practice-container {
+    background-image: url('https://img.freepik.com/free-vector/futuristic-poly-background_23-2148453991.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px;
+    width: 70vw;
+    height: 720px;
+    padding: 20px;
+    margin: 65px auto;
+    box-shadow: 0 6px 12px rgba(0, 3, 1, 0.3);
+}
+
+textarea {
+    width: 90%;
+    height: 70%;
+    padding: 20px;
+    margin: 10px 2px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+h1{
+    color: white;
+    font-size: 40px;
+}
+button {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 50px;
+    padding: 15px;
+    background-color: rgb(255 68 68);
+    color: rgb(32, 4, 4);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+button:hover {
+    background-color: white;
+}
