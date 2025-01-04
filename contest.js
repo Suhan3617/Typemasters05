@@ -111,27 +111,32 @@ async function calculateResults() {
     const missedwords = [];
     const incorrectwords = [];
 
-    generatedwords.forEach((word, index) => {
-        if (typedwords[index] === word) {
+    // Calculate accuracy based only on the number of typed words
+    for (let i = 0; i < typedwords.length; i++) {
+        if (generatedwords[i] === typedwords[i]) {
             correcttypedwords++;
         } else {
-            missedwords.push(word);
-            if (typedwords[index]) {
-                incorrectwords.push(typedwords[index]);
-            }
+            incorrectwords.push(typedwords[i]);
         }
-    });
+    }
 
-    const accuracy = Math.round((correcttypedwords / generatedwords.length) * 100);
+    // Missed words are those in the generated text that were not typed at all
+    for (let i = typedwords.length; i < generatedwords.length; i++) {
+        missedwords.push(generatedwords[i]);
+    }
+
+    const accuracy = Math.round((correcttypedwords / typedwords.length) * 100);
     const difficultylevelvalues = {
-                easy: 1,
-                moderate: 2,
-                hard: 3,
-            };
+        easy: 1,
+        moderate: 2,
+        hard: 3,
+    };
+
     function formulaforscore(wpm, accuracy, difficulty) {
         const difficultyvalues = difficultylevelvalues[difficulty] || 1;
         return wpm * 0.8 + accuracy * 0.4 + difficultyvalues * 10;
     }
+
     const score = formulaforscore(wpm, accuracy, difficulty || "easy");
 
     document.getElementById("wpm").innerHTML = wpm;
@@ -184,7 +189,7 @@ async function calculateResults() {
         },
     });
 
-    await saveresults(wpm, accuracy, timeInMinutes * 60, document.getElementById("difficulty").value);
+    await saveresults(wpm, accuracy, timeInMinutes * 60, difficulty);
 }
 
 // Function for saving results to Firestore
