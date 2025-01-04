@@ -64,7 +64,12 @@ document.getElementById("startcontest").addEventListener("click", () => {
     generatedtext = fetchGeneratedText(difficulty, time);
     const generatedTextElement = document.getElementById("textgenerated");
     if (generatedTextElement) {
+        // Update text and add styles to make it unselectable and uncopyable
         generatedTextElement.innerHTML = generatedtext;
+        generatedTextElement.style.userSelect = "none"; // Prevent text selection
+        generatedTextElement.style.webkitUserSelect = "none";
+        generatedTextElement.style.MozUserSelect = "none";
+        generatedTextElement.style.pointerEvents = "none"; // Disable copying
     } else {
         console.error("Element with ID 'textgenerated' not found.");
     }
@@ -88,6 +93,7 @@ document.getElementById("startcontest").addEventListener("click", () => {
         }
     }, 1000);
 });
+
 
 //calculation of results and creation of pie chart
 async function calculateResults() {
