@@ -33,7 +33,7 @@ const difficultyValues = {
 //calculating score
 function calculateScore(wpm, accuracy, difficulty) {
     const difficultyMultiplier = difficultyValues[difficulty] || 1;
-    return wpm * 0.8 + accuracy * 0.4 + difficultyMultiplier * 5;
+    return wpm * 0.8 + accuracy * 0.4 + difficultyMultiplier * 10;
 }
 
 async function fetchTopScores() {
