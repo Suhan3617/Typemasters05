@@ -31,12 +31,6 @@ A real-time, analytics-driven typing arena that helps users enhance their typing
 
 ---
 
-## 📱 Responsive Design
-
-Fully responsive UI optimized for **mobile**, **tablet**, and **desktop** devices.
-
----
-
 ## 🚀 Use Case
 
 Whether you're a **casual typist**, a **productivity enthusiast**, or a **competitive keyboard warrior**, TYPEMASTERS helps you track growth, compete globally, and stay engaged.
